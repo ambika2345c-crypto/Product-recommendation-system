@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>AI Recommendation System</title>
+
+    <!-- 🔥 ADD STYLE HERE -->
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: white;
+            margin: 8px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>✨ AI Product Recommendation System ✨</h1>
+
+<form method="POST">
+    Enter Customer ID:
+    <input type="text" name="user_id">
+    <button type="submit">Get Recommendations</button>
+</form>
+
+<hr>
+
+<h2>Results:</h2>
+
+<ul>
+{% for item in recs %}
+    <li>{{ item }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
+
